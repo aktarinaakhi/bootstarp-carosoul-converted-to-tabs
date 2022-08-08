@@ -5,9 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Casepacer</title>
+    <title>Casepacer carosoul</title>
 
     <style>
+        .main {
+            /* text-align: center; */
+        }
+
         #child-tabs {
             position: absolute;
         }
@@ -22,25 +26,31 @@
         }
 
         .carousel-indicators {
-            top: 0 !important;
-            width: 100% !important;
-            position: unset !important;
-            border-bottom: 0.138vw solid rgba(130, 95, 232, 0.5);
+            /* left: 0 !important; */
+            width: 30% !important;
+            /* position: unset !important; */
+            /* border-bottom: 0.138vw solid rgba(130, 95, 232, 0.5); */
             padding-top: 30px;
-            margin-left: 0% !important;
+            /* margin-left: 0% !important; */
             display: flex;
-            flex-direction: row !important;
+            flex-direction: column !important;
             justify-content: space-between;
-            align-items: center;
+            /* align-items: center; */
+            align-items: start;
+            position: absolute;
+            left: 0% !important;
+            text-align: left !important;
+            top: 0;
         }
 
         .carousel-indicators .active {
             background-color: #fff;
-            border-color: #4100ff !important;
-            border-bottom: 0.2vw solid transparent;
+            /* border-color: #4100ff !important; */
+            /* border-bottom: 0.2vw solid transparent; */
             font-weight: 700 !important;
             color: #4100ff;
-            padding-bottom: 30px;
+            padding-bottom: 34px;
+
 
         }
 
@@ -161,6 +171,29 @@
                 height: auto;
             }
 
+            .icons i {
+                font-size: 30px !important;
+                margin-right: 20px !important;
+            }
+
+            .bi-box::before {
+                font-size: 20px !important;
+            }
+
+            .bi::before,
+            [class^="bi-"]::before,
+            [class*=" bi-"]::before {
+
+                font-size: 30px !important;
+            }
+
+            .bi::after,
+            [class^="bi-"]::before,
+            [class*=" bi-"]::before {
+                font-size: 30px !important;
+                margin-right: 30px !important;
+            }
+
 
         }
     </style>
@@ -173,17 +206,27 @@
 
 <body>
     <div class="container">
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <div id="carouselExampleIndicators" class="carousel slide main" data-ride="carousel">
             <!-- Indicators -->
             <div class="carousel-indicators">
                 <h1 type="span" data-target="#carouselExampleIndicators" data-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1">For Lawyers</h1>
-                <h1 type="span" data-target="#carouselExampleIndicators" data-slide-to="1" aria-label="Slide 2">For
-                    Admin</h1>
-                <h1 type="span" data-target="#carouselExampleIndicators" data-slide-to="2" aria-label="Slide 3">For
-                    Intake Specialists</h1>
-                <h1 type="span" data-target="#carouselExampleIndicators" data-slide-to="3" aria-label="Slide 3">For
-                    Paralegals</h1>
+                    aria-current="true" aria-label="Slide 1"><span class="icons"><i class="bi bi-box"></i></span>Content
+                    Creation</h1>
+                <h1 type="span" data-target="#carouselExampleIndicators" data-slide-to="1" aria-label="Slide 2"><span><i
+                            class="bi bi-window-stack"></i></span>Search
+                    Engine Marketing</h1>
+                <h1 type="span" data-target="#carouselExampleIndicators" data-slide-to="2" aria-label="Slide 3"><span><i
+                            class="bi bi-subtract"></i></span>Custom
+                    development</h1>
+                <h1 type="span" data-target="#carouselExampleIndicators" data-slide-to="3" aria-label="Slide 3"><span><i
+                            class="bi bi-medium"></i></span>Social
+                    Media marketing</h1>
+                <h1 type="span" data-target="#carouselExampleIndicators" data-slide-to="4" aria-label="Slide 3"><span><i
+                            class="bi bi-envelope-check"></i></span>Email
+                    Marketing</h1>
+                <h1 type="span" data-target="#carouselExampleIndicators" data-slide-to="5" aria-label="Slide 3"><span><i
+                            class="bi bi-zoom-in"></i></span>Search
+                    Engine Optimization</h1>
             </div>
 
             <!-- Wrapper for slides -->
@@ -191,9 +234,9 @@
                 <div class="item active">
                     <div class="content-parent">
                         <div class="tab-left-content">
-                            <h1 class="content-heading">For Lawyers</h1>
-                            <p class="content-description">Instantly monitor status of every case from the dashboard,
-                                from anywhere in the world.
+                            <h1 class="content-heading">Content Creation</h1>
+                            <p class="content-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. A
+                                illo veniam sapiente ut repellat laborum temporibus autem, incidunt eius repudiandae!
                             </p>
                             <button class="content-button">EXPLORE THE
                                 BENEFITS
@@ -201,7 +244,7 @@
                         </div>
 
                         <div class="tab-right-content">
-                            <img src="./images/for-lawyers-screenshot.png" alt="Los Angeles">
+                            <img class="rounded-2" src="./assets/images/content-creation.jpg" alt="Los Angeles">
                         </div>
                     </div>
                 </div>
@@ -209,9 +252,10 @@
                 <div class="item">
                     <div class="content-parent">
                         <div class="tab-left-content">
-                            <h1 class="content-heading">For Admin</h1>
-                            <p class="content-description">Instantly monitor status of every case from the dashboard,
-                                from anywhere in the world.
+                            <h1 class="content-heading">Search
+                                Engine Marketing</h1>
+                            <p class="content-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Perspiciatis eveniet nemo ut animi quidem, at non assumenda laboriosam dolorem in.
                             </p>
                             <button class="content-button">EXPLORE THE
                                 BENEFITS
@@ -219,7 +263,7 @@
                         </div>
 
                         <div class="tab-right-content">
-                            <img src="./images/admin-screenshot.png" alt="Los Angeles">
+                            <img src="./assets/images/sem.jpg" alt="Los Angeles">
                         </div>
                     </div>
                 </div>
@@ -227,18 +271,18 @@
                 <div class="item">
                     <div class="content-parent">
                         <div class="tab-left-content">
-                            <h1 class="content-heading">For Intake Specialists
+                            <h1 class="content-heading">Custom
+                                development
                             </h1>
-                            <p class="content-description">Automate intake forms for all clients with common templates,
-                                collecting initial data for each case without ever picking up the phone or writing an
-                                email.
+                            <p class="content-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad
+                                recusandae ab nisi saepe quidem eveniet repudiandae beatae labore quibusdam excepturi?
                             </p>
                             <button class="content-button">EXPLORE THE
                                 BENEFITS
                                 <span><i class="bi bi-arrow-right-circle"></i></span></button>
                         </div>
                         <div class="tab-right-content">
-                            <img src="./images/intake-specialists-screenshot.png" alt="Los Angeles">
+                            <img src="./assets/images/custom-development.jpg" alt="Los Angeles">
 
                         </div>
 
@@ -248,7 +292,8 @@
                 <div class="item">
                     <div class="content-parent">
                         <div class="tab-left-content">
-                            <h1 class="content-heading">For Paralegals</h1>
+                            <h1 class="content-heading">Social
+                                Media marketing</h1>
                             <p class="content-description">Manage all documents and deadlines from a single central hub,
                                 using customizable workflows and reminders to automate your internal processes.
                             </p>
@@ -257,7 +302,45 @@
                                 <span><i class="bi bi-arrow-right-circle"></i></span></button>
                         </div>
                         <div class="tab-right-content">
-                            <img src="./images/paralegal-screenshot.png" alt="Los Angeles">
+                            <img src="./assets/images/social-media-marketing.jpg" alt="Los Angeles">
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="content-parent">
+                        <div class="tab-left-content">
+                            <h1 class="content-heading">Email
+                                Marketing</h1>
+                            <p class="content-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Voluptates voluptatem ducimus et harum odit tenetur neque beatae. Optio, sapiente eius?
+                            </p>
+                            <button class="content-button">EXPLORE THE
+                                BENEFITS
+                                <span><i class="bi bi-arrow-right-circle"></i></span></button>
+                        </div>
+                        <div class="tab-right-content">
+                            <img src="./assets/images/email-marketing.jpg" alt="Los Angeles">
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="content-parent">
+                        <div class="tab-left-content">
+                            <h1 class="content-heading">Search
+                                Engine Optimization</h1>
+                            <p class="content-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                Corporis quae vero voluptatum, temporibus earum totam sint pariatur odit? Sit, eos!
+                            </p>
+                            <button class="content-button">EXPLORE THE
+                                BENEFITS
+                                <span><i class="bi bi-arrow-right-circle"></i></span></button>
+                        </div>
+                        <div class="tab-right-content">
+                            <img src="./assets/images/seo.jpg" alt="Los Angeles">
 
                         </div>
 
