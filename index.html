@@ -10,15 +10,8 @@
     <style>
         .main {
             background-color: #0055A2;
-            padding: 30px 20px;
-        }
-
-        #child-tabs {
-            position: absolute;
-        }
-
-        #parent {
-            position: relative;
+            padding: 50px 20px 100px;
+            box-sizing: border-box;
         }
 
         .content-parent {
@@ -28,7 +21,6 @@
 
         .carousel-indicators {
             width: 30% !important;
-            padding-top: 30px;
             display: flex;
             flex-direction: column !important;
             justify-content: space-between;
@@ -44,47 +36,39 @@
             font-weight: 700 !important;
             color: #A220F1;
             height: 13.2% !important;
+            margin: 13.4px 0 !important;
         }
 
         .carousel-indicators h1 {
             font-weight: 600 !important;
             font-size: 20px;
             width: 100% !important;
-            margin: 0;
+            /* margin: 0; */
             padding: 15px 10px;
             background-color: #fff;
 
         }
 
         .content-description {
-            /* color: #525361 !important; */
-            font-family: "circular-std", "Helvetica Neue", sans-serif !important;
             font-weight: 300;
             line-height: 1.5;
             font-size: 24px;
             text-align: left !important;
-            color: #fff;
-
+            color: #fff !important;
         }
 
-        .tab-right-content {
-            width: 50%;
-            margin-top: auto;
-            margin-bottom: auto;
-        }
-
-        .tab-right-content img {
-            margin: 25px 0;
-            width: 100%;
+        .content-heading {
+            color: white;
+            font-size: 40px;
         }
 
         .content-button {
             border: none;
-            /* background-color: white; */
             color: #0055A2;
             font-size: 0.97vw;
             margin-top: 15px;
-            justify-content: flex-start;
+            padding: 15px 20px;
+            border-radius: 50px;
         }
 
         .tab-left-content {
@@ -95,25 +79,26 @@
 
         }
 
-        .bi-arrow-right-circle {
-            font-size: 20px;
+        .tab-right-content img {
+            margin: auto;
+            height: auto;
+            border-radius: 5px;
         }
+
+        /*.............................. mobile reponsive ........................................................ */
 
         @media only screen and (max-width: 600px) {
             .carousel-indicators {
+                top: 0 !important;
+                width: 100% !important;
+                position: unset !important;
+                border-bottom: 0.138vw solid rgba(130, 95, 232, 0.5);
+                /* padding-top: 32px; */
+                margin-left: 0% !important;
                 display: flex;
-                flex-direction: column;
-                flex-wrap: wrap;
-                align-items: center;
+                flex-direction: column !important;
                 justify-content: space-between;
-                text-align: left !important;
-                border-bottom: 0.138vw solid #0055A2;
-            }
-
-            .carousel-indicators h1 {
-                font-weight: 500 !important;
-                font-size: 17px;
-                padding: 0 0 20px !important;
+                align-items: center;
             }
 
             .carousel-indicators .active {
@@ -125,6 +110,15 @@
 
             }
 
+            .carousel-indicators h1 {
+                font-weight: 600 !important;
+                font-size: 20px;
+                width: 100% !important;
+                /* margin: 0; */
+                padding: 15px 10px;
+                background-color: #fff;
+            }
+
             .content-parent {
                 display: flex;
                 flex-direction: column;
@@ -132,6 +126,9 @@
 
             .tab-left-content {
                 width: 100%;
+                margin-top: auto;
+                margin-bottom: auto;
+                padding: 0;
             }
 
             .tab-right-content {
@@ -153,6 +150,7 @@
             .content-button {
                 font-size: 2.97vw !important;
                 margin-bottom: 15px !important;
+                padding: 15px 10px !important;
             }
 
             .content-description {
@@ -162,35 +160,8 @@
             .tab-right-content img {
                 margin: auto;
                 height: auto;
+                border-radius: 5px;
             }
-
-            .icons i {
-                font-size: 30px !important;
-                margin-right: 20px !important;
-            }
-
-            .content-parent {
-                margin: 0 30px !important;
-            }
-
-            /* .bi-box::before {
-                font-size: 20px !important;
-            }
-
-            .bi::before,
-            [class^="bi-"]::before,
-            [class*=" bi-"]::before {
-
-                font-size: 30px !important;
-            }
-
-            .bi::after,
-            [class^="bi-"]::before,
-            [class*=" bi-"]::before {
-                font-size: 30px !important;
-                margin-right: 30px !important;
-            } */
-
 
         }
     </style>
@@ -244,9 +215,7 @@
                                     illo veniam sapiente ut repellat laborum temporibus autem, incidunt eius
                                     repudiandae!
                                 </p>
-                                <button class="content-button">EXPLORE THE
-                                    BENEFITS
-                                    <span><i class="bi bi-arrow-right-circle"></i></span></button>
+                                <button class="content-button">Explore Services</button>
                             </div>
 
                             <div class="tab-right-content">
@@ -263,13 +232,11 @@
                                 <p class="content-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                     Perspiciatis eveniet nemo ut animi quidem, at non assumenda laboriosam dolorem in.
                                 </p>
-                                <button class="content-button">EXPLORE THE
-                                    BENEFITS
-                                    <span><i class="bi bi-arrow-right-circle"></i></span></button>
+                                <button class="content-button">Explore Services</button>
                             </div>
 
                             <div class="tab-right-content">
-                                <img src="./assets/images/sem.jpg" alt="Los Angeles">
+                                <img src="./assets/images/sem.jpg" alt="Los Angeles" />
                             </div>
                         </div>
                     </div>
@@ -285,12 +252,10 @@
                                     recusandae ab nisi saepe quidem eveniet repudiandae beatae labore quibusdam
                                     excepturi?
                                 </p>
-                                <button class="content-button">EXPLORE THE
-                                    BENEFITS
-                                    <span><i class="bi bi-arrow-right-circle"></i></span></button>
+                                <button class="content-button">Explore Services</button>
                             </div>
                             <div class="tab-right-content">
-                                <img src="./assets/images/custom-development.jpg" alt="Los Angeles">
+                                <img src="./assets/images/custom-development.jpg" alt="Los Angeles" />
 
                             </div>
 
@@ -306,9 +271,7 @@
                                     hub,
                                     using customizable workflows and reminders to automate your internal processes.
                                 </p>
-                                <button class="content-button">EXPLORE THE
-                                    BENEFITS
-                                    <span><i class="bi bi-arrow-right-circle"></i></span></button>
+                                <button class="content-button">Explore Services</button>
                             </div>
                             <div class="tab-right-content">
                                 <img src="./assets/images/social-media-marketing.jpg" alt="Los Angeles">
@@ -326,9 +289,7 @@
                                     Voluptates voluptatem ducimus et harum odit tenetur neque beatae. Optio, sapiente
                                     eius?
                                 </p>
-                                <button class="content-button">EXPLORE THE
-                                    BENEFITS
-                                    <span><i class="bi bi-arrow-right-circle"></i></span></button>
+                                <button class="content-button">Explore Services</button>
                             </div>
                             <div class="tab-right-content">
                                 <img src="./assets/images/email-marketing.jpg" alt="Los Angeles">
@@ -345,9 +306,7 @@
                                 <p class="content-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                                     Corporis quae vero voluptatum, temporibus earum totam sint pariatur odit? Sit, eos!
                                 </p>
-                                <button class="content-button">EXPLORE THE
-                                    BENEFITS
-                                    <span><i class="bi bi-arrow-right-circle"></i></span></button>
+                                <button class="content-button">Explore Services</button>
                             </div>
                             <div class="tab-right-content">
                                 <img src="./assets/images/seo.jpg" alt="Los Angeles">
